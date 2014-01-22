@@ -16,7 +16,8 @@
 
 static inline int GetRequireHeight(const bool testnet = fTestNet)
 {
-    return testnet ? 0 : 470000;
+    // Mincoin: Node's max block height must be larger than this to be a valid node.
+    return testnet ? 0 : 302000;
 }
 
 std::string static inline ToString(const CService &ip) {
