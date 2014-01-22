@@ -1,7 +1,7 @@
-litecoin-seeder
+MinCoin-Seeder
 ===============
 
-Litecoin-seeder is a crawler for the Litecoin network, which exposes a list
+MinCoin-Seeder is a crawler for the MinCoin network, which exposes a list
 of reliable nodes via a built-in DNS server.
 
 Features:
