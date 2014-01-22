@@ -22,6 +22,7 @@ static const char* ppszTypeName[] =
     "block",
 };
 
+// Mincoin: increase each by adding 2 to bitcoin's value.
 unsigned char pchMessageStart[4] = { 0xfb, 0xc0, 0xb6, 0xdb };
 
 CMessageHeader::CMessageHeader()
