@@ -342,7 +342,8 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-// Mincoin: We have no other dns seeders.
+// Mincoin: We don't have any mainnet seeders right now.
+/*
 static const string mainnet_seeds[];
 static const string testnet_seeds[];
 static const string *seeds = mainnet_seeds;
@@ -363,6 +364,7 @@ extern "C" void* ThreadSeeder(void*) {
     Sleep(1800000);
   } while(1);
 }
+*/
 
 int main(int argc, char **argv) {
   signal(SIGPIPE, SIG_IGN);
@@ -383,7 +385,8 @@ int main(int argc, char **argv) {
       pchMessageStart[1] = 0xc1;
       pchMessageStart[2] = 0xb7;
       pchMessageStart[3] = 0xdc;
-      seeds = testnet_seeds;
+      // Mincoin: We don't have any mainnet seeders right now.
+      //seeds = testnet_seeds;
       fTestNet = true;
   }
   if (!opts.ns) {
@@ -418,7 +421,8 @@ int main(int argc, char **argv) {
     printf("done\n");
   }
   printf("Starting seeder...");
-  pthread_create(&threadSeed, NULL, ThreadSeeder, NULL);
+  // Mincoin: We don't have any mainnet seeders right now.
+  //pthread_create(&threadSeed, NULL, ThreadSeeder, NULL);
   printf("done\n");
   printf("Starting %i crawler threads...", opts.nThreads);
   pthread_attr_t attr_crawler;
